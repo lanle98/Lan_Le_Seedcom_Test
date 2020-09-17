@@ -57,9 +57,15 @@ $black: #464646;
     width: 20px;
     border-radius: 100px;
     display: flex;
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: .1s;
+    
+    &:hover {
+        transform: scale(1.1)
+    }
 }
 
 .disabled {

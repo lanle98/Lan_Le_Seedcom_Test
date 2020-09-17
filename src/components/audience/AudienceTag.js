@@ -16,10 +16,7 @@ const AudienceItem = (props) => {
   const [name, setName] = useState(`${audienceType} ${audienceOperator} ${audienceValue}`)
 
   const generateClassnames = () => {
-
-    let color = ''
     let firstLetter = name.split('')[0]
-    
     switch (firstLetter.toLowerCase()) {
         case 'h':
             return 'yellow'
