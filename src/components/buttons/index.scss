@@ -1,0 +1,67 @@
+$blue: #168fff;
+$white: #FCFCFC;
+$darker-white: #E5E5E5;
+$grey: #7E7E7E;
+$black: #464646;
+
+.btn{
+
+    position: relative;
+    transition:.2s;
+
+}
+
+.submit-btn {
+    width: 100px;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: $blue;
+    color: white;
+}
+
+.cancel-btn {
+    width: 100px;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: $grey;
+    color: white;
+    margin-right: 10px;
+}
+
+.add-btn {
+    background:$blue;
+    width: 30px;
+    height: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.trash-btn {
+    img{
+        width: 20px
+    }
+    cursor: pointer;
+   
+}
+
+.remove-btn {
+    background: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.disabled {
+    cursor: default;
+}

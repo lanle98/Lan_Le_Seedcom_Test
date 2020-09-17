@@ -1,0 +1,57 @@
+$white: #FCFCFC;
+$darker-white: #E5E5E5;
+$grey: #7E7E7E;
+$black: #464646;
+
+.form {
+    background: #FCFCFC;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 40px 60px;
+    font-family: 'Montserrat', sans-serif;
+    width:40%;
+
+
+    .form-title{
+        margin: 0;
+        font-weight: 300;
+        margin-bottom: 30px;
+        color: $black;
+        font-size: 20px;
+    }
+
+    .form-audience-inputs {
+        display: flex;
+        flex-direction: column;
+
+        .input-field{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+
+            input, select, textarea{
+                min-height: 30px;
+                border: 2px solid $darker-white;
+                border-radius:5px;
+                padding: 0 10px;
+                color: $black;
+            }
+
+            label{
+                font-weight: 700;
+                color: $grey;
+                margin-bottom:5px;
+                font-size: 14px;
+            }
+
+            textarea{
+                min-height: 50px;
+                padding: 10px;
+            }
+        }
+    }
+
+    .submit-btn{
+        margin-left: auto;
+    }
+}
