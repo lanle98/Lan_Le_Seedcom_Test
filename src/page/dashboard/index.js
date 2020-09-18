@@ -38,7 +38,7 @@ const Dashboard = (props) => {
     <div className='form form-audience'>
       <h2 className='form-title'>What’s your audience segment?</h2>
       <Formik
-        initialValues={{ name: '', location: '', description: '' }}
+        initialValues={{ name: '', location: '', description: '', audienceSet: '' }}
         onSubmit={async (values) => {
           await new Promise((resolve) => setTimeout(resolve, 500));
           alert(JSON.stringify(values, null, 2));
@@ -71,7 +71,7 @@ const Dashboard = (props) => {
             <label htmlFor='description'>
               Existing Customer Segmentation base on:
             </label>
-            <Field name='audience-set'>{(field) => <AudienceSetContainer field={field}/>}</Field>
+            <Field name='audienceSet'>{field => <AudienceSetContainer field={field}/>}</Field>
           </div>
 
           <SubmitBtn name='Next' />

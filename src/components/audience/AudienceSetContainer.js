@@ -1,13 +1,16 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import './index.scss';
 
 import AudienceSet from './AudienceSet';
 
-const AudienceSetContainer = () => {
+const AudienceSetContainer = (props) => {
+
+  const { field } = props;
+
   const [audienceSet, setAudienceSet] = useState([
     { id: 1, component: AudienceSet },
   ]);
-  let audiences = []
+  const [audienceValues, setAudienceValues] = useState([])
 
 
   const handleAddAudienceSet = useCallback(() => {
@@ -22,17 +25,14 @@ const AudienceSetContainer = () => {
   }, [audienceSet]);
 
   const getAudience = (values, setOrder) => {
-    console.log(setOrder)
-    if(audiences.length < setOrder){
-      audiences = ([...audiences,[values]])
-      console.log(audiences.length)
-    }
-    else{
-      audiences[setOrder -= 1] = values
-    }
+    setAudienceValues(prev => [...prev, prev[setOrder-=1] = values])
 
-    console.log(audiences)
+    console.log(audienceValues)
   }
+
+  useEffect(() => {
+    field.form.values.audienceSet = audienceValues
+  },[audienceValues])
 
   return (
     <div className='audience-set-container'>
