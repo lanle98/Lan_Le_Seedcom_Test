@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.scss'
 
 const SubmitBtn = (props) => {
 
-    const { name, onClick } = props;
+    const { name } = props;
 
     return (
       <button type='submit' className='btn submit-btn'>

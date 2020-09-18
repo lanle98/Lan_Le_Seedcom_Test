@@ -1,10 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Formik, Field, Form } from 'formik';
 import './index.scss';
 
 // components
 import SubmitBtn from '../buttons/SubmitBtn';
 import CancelBtn from '../buttons/CancelBtn';
+
+const select = [
+  {
+    value: 'LTV',
+    name: 'LTV',
+  },
+  {
+    value: 'HTV',
+    name: 'HTV',
+  },
+  {
+    value: 'VTV',
+    name: 'VTV',
+  },
+];
+
+const value = [
+  {
+    value: 1,
+    name: '1',
+  },
+  {
+    value: 2,
+    name: '2',
+  },
+  {
+    value: 3,
+    name: '3',
+  },
+];
+
+const operator = [
+  {
+    value: 'less',
+    name: 'less than',
+  },
+  {
+    value: 'more',
+    name: 'more than',
+  },
+  {
+    value: 'equal',
+    name: 'equal to',
+  },
+];
 
 const AudienceAdd = (props) => {
   const { handleClickConfirm, handleClickCancel } = props;
@@ -18,20 +63,21 @@ const AudienceAdd = (props) => {
           <div className='audience-add-selects'>
             <Field as='select' name='type'>
               <option value=''>Type</option>
-              <option value='LTV'>LTV</option>
-              <option value='HTV'>HTV</option>
-              <option value='VTV'>VTV</option>
+              {select.map((item) => (
+                <option key={item.value} value={item.value}>{item.name}</option>
+              ))}
             </Field>
             <Field as='select' name='operator'>
               <option value=''>Operator</option>
-              <option value='less'>less than</option>
-              <option value='more'>more than</option>
-              <option value='equal'>equal to</option>
+              {operator.map((item) => (
+                <option key={item.value} value={item.value}>{item.name}</option>
+              ))}
             </Field>
             <Field as='select' name='value'>
               <option value=''>Value</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
+              {value.map((item) => (
+                <option key={item.value} value={item.value}>{item.name}</option>
+              ))}
             </Field>
           </div>
           <div className='audience-add-btns'>

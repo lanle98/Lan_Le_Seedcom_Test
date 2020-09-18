@@ -3,6 +3,7 @@ $darker-white: #E5E5E5;
 $grey: #7E7E7E;
 $black: #464646;
 
+
 .form {
     background: #FCFCFC;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
@@ -10,6 +11,8 @@ $black: #464646;
     padding: 40px 60px;
     font-family: 'Montserrat', sans-serif;
     width:40%;
+    max-height: 90vh;
+    overflow-y: scroll;
 
 
     .form-title{

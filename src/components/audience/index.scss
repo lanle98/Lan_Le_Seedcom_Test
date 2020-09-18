@@ -11,6 +11,7 @@ $black: #464646;
   display: flex;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 
   .trash-btn {
     position: absolute;
@@ -36,12 +37,15 @@ $black: #464646;
 .audience-item {
   font-size: 12px;
   font-weight: 700;
-  padding: 5px 15px;
+  padding: 5px 20px;
+  font-size: 12px;
   border: 2px solid $blue;
   border-radius: 8px;
   margin-right: 20px;
   position: relative;
   color: $blue;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   .remove-btn {
     position: absolute;
