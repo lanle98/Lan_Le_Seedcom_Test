@@ -24,7 +24,7 @@ const AudienceSetContainer = () => {
   const getAudience = (values, setOrder) => {
     console.log(setOrder)
     if(audiences.length < setOrder){
-      audiences.push(values)
+      audiences = ([...audiences,[values]])
       console.log(audiences.length)
     }
     else{
